@@ -62,8 +62,5 @@ def checkout(cart, coupons) #calculate total of consolidated cart
         end
       end
     end
-  if total > 100
-    total -= total * 0.10
-  end
-  return total
+    return total > 100 ? total -= total * 0.10 : total
 end
